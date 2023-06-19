@@ -1,0 +1,27 @@
+<h1>Listado de categorias</h1>
+<a href="<%= new_categorium_path %>" class="btn btn-primary btn-icon-split">
+  <span class="icon text-white-50">
+      <i class="fas fa-flag"></i>
+  </span>
+  <span class="text">Crear categoria</span>
+</a>
+
+<br><br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+
+  </thead>
+  <tbody>
+    <% @categoria.each do |categoria| %>
+    <tr>
+      <td><%= categoria.nombre %></td>
+      <td><%= categoria.descripcion %></td>
+
+      <td><%= link_to "Detalles", categorium_path(categoria), class: 'btn btn-primary' %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

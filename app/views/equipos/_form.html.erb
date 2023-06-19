@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card p-5">
+      <%= form_with model: @equipo do |f| %>
+        <% if @equipo.errors.any? %>
+          <div class="alert alert-danger">
+            <ul>
+              <% @equipo.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="form-group">
+          <%= f.label :name, "Nombre" %>
+          <%= f.text_field :name, class: "form-control", placeholder: 'Nombre del equipo' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description, "Descripción" %>
+          <%= f.text_field :description, class: "form-control", placeholder: 'Descripción' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :serial, "Serial" %>
+          <%= f.text_field :serial, class: "form-control", placeholder: 'Ingrese el serial del equipo' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :adquisition, "Adquisición" %>
+          <%= f.text_field :adquisition, class: "form-control", placeholder: 'Ingrese el metodo de adquisición' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :state, "Estado" %>
+          <%= f.text_field :state, class: "form-control", placeholder: 'Ingrese el estado del equipo' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :location, "Locación" %>
+          <%= f.text_field :location, class: "form-control", placeholder: 'Ingrese la localización del equipo' %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Guardar equipo", class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

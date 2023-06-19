@@ -1,0 +1,12 @@
+<h1>Editar categoría existente</h1><br>
+<a class="btn btn-primary" href="<%= categoria_path(@categoria) %>">Regresar al listado</a>
+<%= render 'form' %>
+<br>
+<div>
+  <%= link_to "Ver detalles", @categoria, class:"btn btn-primary" %> |
+  <%= link_to "Editar categoria", edit_categorium_path(@categorium), class:"btn btn-warning" %> |
+</div>
+<br>
+  <%= button_to "Eliminar categoria", @categoria, method: :delete %>
+  
+

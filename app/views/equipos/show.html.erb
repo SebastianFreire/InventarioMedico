@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1>Detalles del equipo</h1>
+    <br>
+    <%= link_to "Regresar al listado de equipos", equipos_path, class: 'btn btn-primary' %>
+    <%= link_to "Editar", edit_equipo_path(@equipo), class: 'btn btn-primary' %><br><br>
+    
+    <div class="card">
+      <table class="table">
+        <tr>
+          <td><b>Nombre del equipo:</b></td>
+          <td><%= @equipo.name %></td>
+        </tr>
+        <tr>
+          <td><b>Descripcion:</b></td>
+          <td><%= @equipo.description %></td>
+        </tr>
+        <tr>
+          <td><b>Serial:</b></td>
+          <td><%= @equipo.serial %></td>
+        </tr>
+        <tr>
+          <td><b>Adquisicion:</b></td>
+          <td><%= @equipo.adquisition %></td>
+        </tr>
+        <tr>
+          <td><b>Estado:</b></td>
+          <td><%= @equipo.state %></td>
+        </tr>
+        <tr>
+          <td><b>localizacion:</b></td>
+          <td><%= @equipo.location %></td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <%= button_to "Eliminar equipo", @equipo, method: :delete, class: 'btn btn-danger' %>
+    
+  </div>
+</div>
+

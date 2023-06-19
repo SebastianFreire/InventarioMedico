@@ -1,0 +1,15 @@
+<h1>Editar equipo existente</h1><br>
+<a class="btn btn-primary" href="<%= equipo_path(@equipo) %>">Regresar al listado</a>
+<%= render 'form' %>
+
+<br>
+<div>
+  <%= link_to "Ver detalles", @equipo, class:"btn btn-primary" %> |
+  <%= link_to "Editar equipo", edit_equipo_path(@equipo), class:"btn btn-warning" %> |
+
+
+  </div>
+<br>
+  <%= button_to "Eliminar equipo", @equipo, method: :delete %>
+  
+

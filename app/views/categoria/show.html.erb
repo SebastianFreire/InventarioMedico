@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1>Detalles de las categorías</h1>
+    
+    <%= link_to "Regresar al listado de categorías", categoria_path, class: 'btn btn-primary' %>
+    <%= link_to "Editar", edit_categorium_path(@categorium), class: 'btn btn-warning' %>
+    <br><br>
+    <div class="card">
+      <table class="table">
+        <tr>
+          <td><b>Nombre del equipo:</b></td>
+          <td><%= @categorium.nombre %></td>
+        </tr>
+        <tr>
+          <td><b>Descripcion:</b></td>
+          <td><%= @categorium.descripcion %></td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <%= button_to "Eliminar categoría", @categoria, method: :delete, class: 'btn btn-danger' %>
+  </div>
+</div>
+

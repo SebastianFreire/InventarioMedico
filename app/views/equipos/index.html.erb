@@ -1,0 +1,33 @@
+<h1>Listado de equipos médicos</h1>
+<a href="<%= new_equipo_path %>" class="btn btn-primary btn-icon-split">
+  <span class="icon text-white-50">
+    <i class="fas fa-flag"></i>
+  </span>
+  <span class="text">Registrar equipo</span>
+</a>
+<br><br>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Serial</th>
+      <th>Adquisición</th>
+      <th>Estado</th>
+      <th>Locación</th>
+  </thead>
+  <tbody>
+    <% @equipos.each do |equipo| %>
+    <tr>
+      <td><%= equipo.name %></td>
+      <td><%= equipo.description %></td>
+      <td><%= equipo.serial %></td>
+      <td><%= equipo.adquisition %></td>
+      <td><%= equipo.state %></td>
+      <td><%= equipo.location %></td>
+      <td><%= link_to "Detalles", equipo_path(equipo), class: 'btn btn-primary' %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
